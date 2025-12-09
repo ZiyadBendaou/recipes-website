@@ -1,4 +1,5 @@
 const featuredRec = document.querySelector(".featured-recipes");
+const resultsContainer = document.querySelector(".result-recipes");
 
 window.addEventListener("pageshow", () => {
   featuredRec.innerHTML = "";
@@ -30,6 +31,7 @@ function recRender(recipe) {
 const resultCont = document.querySelector(".result-recipes");
 const searchBtn = document.querySelector(".search-icon");
 searchBtn.addEventListener("click", () => {
+  resultsContainer.innerHTML = "";
   let searchText = document.querySelector(".search-text").value.trim();
   createResult(searchText);
 });
