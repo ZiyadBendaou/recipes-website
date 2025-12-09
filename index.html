@@ -24,13 +24,13 @@
         </button>
       </div>
       <div class="nav-list">
-        <a href="" class="nav-item">Home</a>
-        <a href="" class="nav-item">About</a>
-        <a href="" class="nav-item">Contact</a>
+        <a href="index.html#home" class="nav-item">Home</a>
+        <a href="index.html#about" class="nav-item">About</a>
+        <a href="index.html#contact" class="nav-item random-rec">Contact</a>
       </div>
     </nav>
   </header>
-  <main class="index-main">
+  <main class="index-main" id="home">
     <div class="hero">
       <h1 class="hero-title">Welcome to our Recipe Site</h1>
       <div class="search-box">
@@ -51,7 +51,59 @@
         </div>
       </div>
     </div>
+
+
   </main>
+  <section class="about-section" id="about">
+    <h2 class="about-title">About Us</h2>
+
+    <p class="about-text">
+      Welcome to <strong>Recipes</strong> — a space where cooking becomes simple, enjoyable and inspiring.
+      We collect delicious recipes from around the world and present them in a clear, modern and accessible way.
+    </p>
+
+    <p class="about-text">
+      Whether you're a beginner or an experienced home cook, our goal is to help you discover new dishes,
+      understand ingredients easily, and enjoy the process of cooking every day.
+    </p>
+
+    <ul class="about-list">
+      <li>✔ Easy and intuitive recipes</li>
+      <li>✔ Clean, modern interface</li>
+      <li>✔ Smart search to find dishes instantly</li>
+      <li>✔ A growing selection of featured meals</li>
+    </ul>
+  </section>
+  <section class="contact-section">
+    <h2 class="contact-title">Contact Us</h2>
+
+    <p class="contact-text">
+      Have questions or want to share feedback? We'd love to hear from you! Fill out the form below and we'll get back
+      to
+      you as soon as possible.
+    </p>
+
+    <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form" id="contact">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="contact-btn">Send Message</button>
+    </form>
+    <p id="form-msg"></p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <h2 class="footer-logo">Recipes</h2>
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+
+      <p class="footer-copy">© <span class="date"></span> Recipes. All rights reserved.</p>
+    </div>
+  </footer>
   <script src="app.js"></script>
   <script src="index.js"></script>
 </body>

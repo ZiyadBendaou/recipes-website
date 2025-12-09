@@ -55,3 +55,16 @@ function resultRender(results) {
     resultCont.appendChild(link);
   });
 }
+
+const contactForm = document.getElementById("contact-form");
+const formMsg = document.getElementById("form-msg");
+
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const name = contactForm.name.value;
+  const email = contactForm.email.value;
+  const message = contactForm.message.value;
+  formMsg.textContent = "Thank you! Your message has been sent.";
+  contactForm.reset();
+});
