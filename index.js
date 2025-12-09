@@ -30,10 +30,19 @@ function recRender(recipe) {
 }
 const resultCont = document.querySelector(".result-recipes");
 const searchBtn = document.querySelector(".search-icon");
-searchBtn.addEventListener("click", () => {
+let searchInput = document.querySelector(".search-text");
+function doSearch() {
   resultsContainer.innerHTML = "";
-  let searchText = document.querySelector(".search-text").value.trim();
+  let searchText = searchInput.value.trim();
   createResult(searchText);
+}
+
+searchBtn.addEventListener("click", doSearch);
+
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    doSearch();
+  }
 });
 
 async function createResult(call) {
